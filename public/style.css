@@ -1,0 +1,810 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+
+* {
+    box-sizing: border-box;
+    font-family: 'britannic-bold-regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --firt-color: #C66023;
+    --back-color: #1e2326;
+}
+
+html {
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--back-color);
+    color: aliceblue;
+}
+
+section[id] {
+    scroll-margin-top: 78px;
+}
+
+/* MENU */
+.contenedor-header {
+    background: var(--back-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-bottom: 8px dotted rgb(239, 214, 103);
+}
+
+.logo img {
+    width: 110px;
+    height: 50px;
+
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 0;
+}
+
+.contenedor-header header .logo a {
+    font-family: "Righteous";
+    font-size: 36px;
+    color: var(--firt-color);
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: rgb(255, 253, 253);
+    margin: 0 15px;
+    padding: 3px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: var(--firt-color);
+}
+
+.nav-responsive {
+    background-color: var(--firt-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+
+    nav.responsive ul {
+        display: block !important;
+    }
+
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+/*bienvenidos*/
+.bienvenidos {
+    margin: 0 auto;
+    background: url(./img/bg+principal.svg);
+    width: 100%;
+    height: 237px;
+    background-size: cover;
+    background-position: bottom;
+    align-items: center;
+    background-repeat: no-repeat;
+    max-width: 1100px;
+    margin-top: 68px;
+
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.destaque {
+    color: var(--firt-color);
+    display: inline-block;
+}
+
+.bienvenidos h1 {
+    color: #fffdfa;
+    text-align: center;
+    width: 95%;
+
+}
+
+.bienvenidos p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*SOMOS*/
+.somos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px auto 50px;
+
+}
+
+.somos h2 {
+    margin: 10px auto;
+}
+
+.somos p {
+    text-align: center;
+}
+
+/*talleres*/
+.talleres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--firt-color);
+}
+
+.loco {
+
+    text-align: center;
+    margin-top: -15px;
+}
+
+.taller {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    padding: 20px 30px;
+    border: 8px dotted rgb(239, 214, 103);
+
+
+
+}
+
+.taller h3 {
+    margin: 20px 0;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.taller ul {
+    margin-bottom: 15px;
+
+}
+
+.taller ul li {
+    font-size: 14px;
+}
+
+.saber-mas a {
+    padding: 10px 5px;
+    background-color: #C66023;
+    border-radius: 5px;
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+}
+.saber-mas{
+    display: flex;
+    justify-content: end;
+}
+
+/*COMUNIDAD*/
+/* .comunidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto 50px auto;
+}
+.comunidad h2{
+    margin: 10px auto;
+}
+.comunidad p{
+    text-align: center;
+}
+.comunidad a{
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    background: #e88720;
+    border-radius: 10px;
+    color: #1e2326;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: unset;
+    ;
+
+} */
+
+/*COMO LLEGAR*/
+.llegar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto 50px;
+}
+
+.llegar h2 {
+    margin: 10px auto;
+}
+
+.llegar img {
+    width: 350px;
+
+}
+
+/* formulario
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+
+}
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px;
+    background: #6B2E02;
+    padding: 10px 180px;
+
+}
+.cont{
+    font-size:  24px;
+}
+.contacto p{
+    text-align: center;
+}
+.formulario input{
+    padding: 10px;
+    background:#C66023;
+    width: 302px;
+    border: none;
+    box-shadow: 1px 4px 9px 1px;
+
+}
+.formulario textarea{
+    padding: 10px;
+    background: #C66023;
+    width: 302px;
+    height: 100px;
+    border: none;
+    box-shadow: 1px 4px 9px 1px;
+
+}
+.formulario button{
+    margin: 10px 5px;
+    background-color: #C66023;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    box-shadow: 1px 4px 9px 1px rgb(0, 0, 0);
+    float: right;
+}
+.formulario label{
+    padding: 5px;
+}
+
+
+
+
+form{
+    flex-direction: column;
+} */
+/*footer*/
+
+.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    gap: 5px;
+
+}
+
+.google a {
+    background-color: #C66023;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+
+
+
+footer {
+    background-color: var(--back-color);
+    color: #fff;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes {
+    margin-bottom: 50px;
+}
+
+footer .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--firt-color);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.copi {
+    border-top: 8px dotted rgb(239, 214, 103);
+    margin-top: 10px;
+
+}
+
+.copi p {
+    margin: 20px;
+}
+
+
+.hero-area {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 180px;
+    height: 26vh;
+    max-width: 1100px;
+    text-align: center;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.hero-area h1 {
+    font-size: 40px;
+}
+
+.hero-pedagogia {
+    background: url(./img/bgpedagogialetras.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-movimiento {
+    background: url(./img/bg+movimiento+actual.png);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-visuales {
+    background: url(./img/bgvisuales.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-danza {
+    background: url(./img/bgdanza.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-musica {
+    background: url(./img/bgmusica.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-artes {
+    background: url(./img/bgdramaticas.jpg);
+    background-size: cover;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+.btn-contacto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.con {
+    width: 130px;
+    height: 100px;
+    background: rgba(255, 0, 0, 0);
+    position: fixed;
+    line-height: 35px;
+    bottom: 100px;
+    right: 25px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.con a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.rojo {
+    color: red;
+}
+
+.pepe {
+    color: rgb(255, 174, 0);
+    font-size: 24px;
+    text-align: center;
+}
+
+.pepe-loco {
+
+    color: rgb(255, 174, 0);
+    text-align: center;
+}
+
+
+.area-taller {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 5px 10px;
+}
+
+.anotate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+
+
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 300px;
+    padding: 20px;
+    border: 8px dotted rgb(239, 214, 103);
+    background-color: black;
+    gap: 20px;
+    text-align: center;
+}
+
+.t-titulo {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 24px;
+}
+
+.naranja{
+    color: #C66023;
+}
+
+
+@media only screen and (min-width:767px) and (max-width:1022px) {
+
+
+    .bienvenidos {
+        width: 100%;
+        height: 400px;
+        background-position: bottom;
+    }
+
+    .bienvenidos h1 {
+        font-size: 34px;
+    }
+
+    .talleres {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .bb {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .bb h2 {
+        font-size: 40px;
+    }
+
+    .taller {
+        width: 350px;
+        height: 300px;
+    }
+
+    .taller a {
+        margin: initial;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .llegar img {
+        width: 700px;
+    }
+
+    .google {
+        padding: 10px 20px;
+        margin-bottom: 50px;
+
+    }
+
+    .google a {
+        padding: 10px 20px;
+        font-size: 24px;
+    }
+
+    footer .redes a {
+        margin: 27px 25px;
+
+    }
+
+    .volver {
+        margin-right: 50px;
+    }
+
+    .lol {
+        margin-left: 50px;
+    }
+
+    .hero-area {
+        height: 400px;
+    }
+
+    .pepe-loco {
+
+        color: rgb(255, 174, 0);
+        text-align: center;
+    }
+
+    .pepe {
+        color: rgb(255, 174, 0);
+        font-size: 24px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width:1022px) and (max-width:1400px) {
+
+    .bienvenidos {
+        width: 100%;
+        height: 90vh;
+        background-position: bottom;
+    }
+
+    .bienvenidos h1 {
+        font-size: 40px;
+    }
+
+    .talleres {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .taller {
+        width: 350px;
+        height: 300px;
+    }
+    .j-talleres{
+        position: relative;
+        top: -25px;
+
+    }
+
+    .popo{
+        position: relative;
+        bottom: 20px;
+    }
+    .bb {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .viaje {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .acomodar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .llegar img {
+        width: 600px;
+    }
+
+    .viajes p {
+        font-size: 24px;
+    }
+
+    .volver {
+        margin-right: 50px;
+    }
+
+    .lol {
+        margin-left: 50px;
+    }
+
+    .hero-area {
+        height: 577px;
+    }
+
+    .pepe-loco {
+        color: rgb(255, 174, 0);
+        text-align: center;
+    }
+
+    .pepe {
+        color: rgb(255, 174, 0);
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.acomodar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tall {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--back-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+
+}
+
+.ta {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 8px dotted rgb(239, 214, 103);
+}
+
+.lol {
+    width: 100px;
+    margin-left: 10px;
+
+
+}
+
+.volver {
+    padding: 4px 8px;
+    background-color: #C66023;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: 700;
+}
